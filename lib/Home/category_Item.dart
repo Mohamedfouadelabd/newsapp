@@ -9,7 +9,7 @@ class CategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10),
+
       margin: EdgeInsets.all(7),
       decoration: BoxDecoration(
         color: categoryModel.color,
@@ -21,7 +21,10 @@ class CategoryItem extends StatelessWidget {
         children: [
 
 
-          Image.asset(categoryModel.imageUrl),
+          Image.asset(categoryModel.imageUrl,
+          height: MediaQuery.of(context).size.height*0.2,
+
+          ),
           Text(categoryModel.title,
           style: Theme.of(context).textTheme.titleMedium,
 
