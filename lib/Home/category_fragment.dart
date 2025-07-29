@@ -26,7 +26,9 @@ var categoryList=CategoryModel.getCategory(context);
           child: GridView.builder(
             itemCount: categoryList.length,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2
+                crossAxisCount: 2,crossAxisSpacing: 5,
+
+
             ),
             itemBuilder: (context, index) {
               return InkWell(
