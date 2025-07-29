@@ -1,0 +1,35 @@
+{
+  "@@locale": "en",
+  "appTitle": "News App",
+
+  "categories": "Categories",
+  "settings": "Settings",
+  "language": "Language",
+  "theme": "Theme",
+  "light": "Light",
+  "dark": "Dark",
+
+  "business": "Business",
+  "sports": "Sports",
+  "science": "Science",
+  "health": "Health",
+  "technology": "Technology",
+  "entertainment": "Entertainment",
+  "general": "General",
+
+  "loading": "Loading...",
+  "errorLoading": "Error loading data. Please try again.",
+  "noNewsAvailable": "No news available.",
+  "retry": "Retry",
+
+  "newsDetails": "News Details",
+  "readMore": "Read more",
+  "source": "Source",
+
+  "chooseLanguage": "Choose Language",
+  "chooseTheme": "Choose Theme",
+
+  "search": "Search",
+  "searchHint": "Search for news...",
+  "searchEmpty": "No results found for your search."
+}

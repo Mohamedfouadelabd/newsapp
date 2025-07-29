@@ -1,0 +1,35 @@
+{
+  "@@locale": "ar",
+  "appTitle": "تطبيق الأخبار",
+
+  "categories": "التصنيفات",
+  "settings": "الإعدادات",
+  "language": "اللغة",
+  "theme": "المظهر",
+  "light": "فاتح",
+  "dark": "داكن",
+
+  "business": "أعمال",
+  "sports": "رياضة",
+  "science": "علوم",
+  "health": "صحة",
+  "technology": "تكنولوجيا",
+  "entertainment": "ترفيه",
+  "general": "عام",
+
+  "loading": "جاري التحميل...",
+  "errorLoading": "حدث خطأ أثناء تحميل البيانات. حاول مرة أخرى.",
+  "noNewsAvailable": "لا توجد أخبار متاحة.",
+  "retry": "إعادة المحاولة",
+
+  "newsDetails": "تفاصيل الخبر",
+  "readMore": "اقرأ المزيد",
+  "source": "المصدر",
+
+  "chooseLanguage": "اختر اللغة",
+  "chooseTheme": "اختر المظهر",
+
+  "search": "بحث",
+  "searchHint": "ابحث عن الأخبار...",
+  "searchEmpty": "لا توجد نتائج مطابقة لبحثك."
+}
