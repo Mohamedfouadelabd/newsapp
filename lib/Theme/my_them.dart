@@ -17,7 +17,16 @@ class MyTheme {
   static ThemeData lightMode = ThemeData(
     scaffoldBackgroundColor: Colors.transparent,
  appBarTheme: AppBarTheme(
-   centerTitle: true,
+
+    elevation: 0,
+     shape: RoundedRectangleBorder(
+       borderRadius: BorderRadius.only(
+         bottomLeft: Radius.circular(20),
+         bottomRight: Radius.circular(20),
+       ),
+     ),
+     centerTitle: true,
+ backgroundColor: MyTheme.primary
  ),
 
     textTheme: TextTheme(
