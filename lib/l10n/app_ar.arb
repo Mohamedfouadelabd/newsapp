@@ -6,8 +6,7 @@
   "settings": "الإعدادات",
   "language": "اللغة",
   "theme": "المظهر",
-  "light": "فاتح",
-  "dark": "داكن",
+
 
   "business": "أعمال",
   "sports": "رياضة",
@@ -27,7 +26,8 @@
   "source": "المصدر",
 
   "chooseLanguage": "اختر اللغة",
-  "chooseTheme": "اختر المظهر",
+   "english": "انجليزي",
+  "arabic": "عربي",
 
   "search": "بحث",
   "searchHint": "ابحث عن الأخبار...",

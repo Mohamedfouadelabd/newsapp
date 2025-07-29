@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:newsapp/Home/home_screen.dart';
 import 'package:newsapp/Theme/my_them.dart';
 import 'package:newsapp/provider/app_config_provider.dart';
+import 'package:newsapp/settings/settings-tap.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       initialRoute: HomeScreen.routeName,
       routes: {
         HomeScreen.routeName: (context) => HomeScreen(),
+        SettingsTap.routeName: (context) => SettingsTap(),
       },
       theme: MyTheme.lightMode,
       locale: Locale(provider.appLanguage),
