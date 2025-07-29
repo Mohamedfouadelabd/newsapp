@@ -6,8 +6,7 @@
   "settings": "Settings",
   "language": "Language",
   "theme": "Theme",
-  "light": "Light",
-  "dark": "Dark",
+
 
   "business": "Business",
   "sports": "Sports",
@@ -17,18 +16,15 @@
   "entertainment": "Entertainment",
   "general": "General",
 
-  "loading": "Loading...",
-  "errorLoading": "Error loading data. Please try again.",
-  "noNewsAvailable": "No news available.",
-  "retry": "Retry",
+
 
   "newsDetails": "News Details",
   "readMore": "Read more",
   "source": "Source",
 
   "chooseLanguage": "Choose Language",
-  "chooseTheme": "Choose Theme",
-
+  "english": "English",
+ "arabic": "Arabic",
   "search": "Search",
   "searchHint": "Search for news...",
   "searchEmpty": "No results found for your search."
