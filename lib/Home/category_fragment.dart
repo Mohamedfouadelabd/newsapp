@@ -1,11 +1,13 @@
 
 import 'package:flutter/material.dart';
-import 'package:newsapp/Home/category_Item.dart';
+
 import 'package:newsapp/model/CategoryModel.dart';
 
+import 'category_Item.dart';
+
 class CategoryFragment extends StatelessWidget {
-
-
+Function onCategoryClick;
+CategoryFragment({required this.onCategoryClick});
   @override
   Widget build(BuildContext context) {
 var categoryList=CategoryModel.getCategory(context);
@@ -27,7 +29,13 @@ var categoryList=CategoryModel.getCategory(context);
                 crossAxisCount: 2
             ),
             itemBuilder: (context, index) {
-              return CategoryItem(categoryModel:categoryList[index]) ;
+              return InkWell(
+                  onTap: (){
+
+                    onCategoryClick(categoryList[index]);
+                  },
+
+                  child: CategoryItem(categoryModel:categoryList[index])) ;
             },
 
 
