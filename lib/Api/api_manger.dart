@@ -19,10 +19,14 @@ https://newsapi.org/v2/top-headlines/sources?apiKey=52d507d633b5495ab3f5606930cc
 
     }
     );
-var response =await http.get(url);
-var bodyString=response.body;
-var json= jsonDecode(bodyString);
- return SourceResponse.fromJson(json);
+try{
+  var response =await http.get(url);
+  var bodyString=response.body;
+  var json= jsonDecode(bodyString);
+  return SourceResponse.fromJson(json);
+}catch(e){
+  throw e;
+}
   }
 static Future<NewsSourceResponse> getNewsResponse(String id )async{
     /*
@@ -33,9 +37,13 @@ static Future<NewsSourceResponse> getNewsResponse(String id )async{
 'sources':id
 
     });
-   var response=await  http.get(url);
-var bodyString=response.body;
-var json=jsonDecode(bodyString);
-return NewsSourceResponse.fromJson(json);
+try{
+  var response=await  http.get(url);
+  var bodyString=response.body;
+  var json=jsonDecode(bodyString);
+  return NewsSourceResponse.fromJson(json);
+}catch(e){
+  throw e;
+}
   }
 }
