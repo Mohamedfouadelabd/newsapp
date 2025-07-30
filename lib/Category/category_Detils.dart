@@ -17,7 +17,7 @@ class _CategoryDetilsState extends State<CategoryDetils> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<NewsSourceResponse?>(
-      future: ApiManger.getNewsResponse(widget.source.id??""),
+      future: ApiManger.getNewsResponse(widget.source.id??''),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return Center(
