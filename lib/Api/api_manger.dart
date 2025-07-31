@@ -6,7 +6,14 @@ import 'package:newsapp/model/NewsSoureResponse.dart';
 import 'package:newsapp/model/SourceResponse.dart';
 
 class ApiManger {
-  static Future<SourceResponse?> getSources(String categoryId) async {
+  ApiManger._();
+  static ApiManger? _instance ;
+ static ApiManger getApiInstance(){
+    _instance??=ApiManger._();
+  return _instance!;
+  }
+
+  Future<SourceResponse?> getSources(String categoryId) async {
 /*
 https://newsapi.org/v2/top-headlines/sources?apiKey=52d507d633b5495ab3f5606930cc5fa7
 
@@ -26,7 +33,7 @@ https://newsapi.org/v2/top-headlines/sources?apiKey=52d507d633b5495ab3f5606930cc
     }
   }
 
-  static Future<NewsSourceResponse> getNewsResponse(String id) async {
+  Future<NewsSourceResponse> getNewsResponse(String id) async {
     /*
     https://newsapi.org/v2/everything?q=bitcoin&apiKey=52d507d633b5495ab3f5606930cc5fa7
      */
@@ -44,7 +51,7 @@ https://newsapi.org/v2/top-headlines/sources?apiKey=52d507d633b5495ab3f5606930cc
     }
   }
 
-  static Future<NewsSourceResponse> searchNews(String query) async {
+ Future<NewsSourceResponse> searchNews(String query) async {
     /*
     https://newsapi.org/v2/everything?q=bitcoin&apiKey=52d507d633b5495ab3f5606930cc5fa7
      */

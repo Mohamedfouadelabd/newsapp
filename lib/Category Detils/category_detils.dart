@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:newsapp/Category%20Detils/cubit/category_detils_view_model.dart';
 import 'package:newsapp/Category%20Detils/cubit/ststes.dart';
 import 'package:newsapp/Theme/my_them.dart';
+import 'package:newsapp/repository/News/datasourcenews/news_repository_impl.dart';
 
 import '../model/SourceResponse.dart';
 import '../Category/category_detils_item.dart';
@@ -19,7 +20,7 @@ class CategoryDetils extends StatefulWidget {
 class _CategoryDetilsState extends State<CategoryDetils> {
 
 
-CategoryDetilsViewModel viewModel=CategoryDetilsViewModel();
+CategoryDetilsViewModel viewModel=CategoryDetilsViewModel(injectNewsRepositoryContract());
 @override
   void initState() {
     // TODO: implement initState

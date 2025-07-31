@@ -6,6 +6,7 @@ import 'package:newsapp/CategorySourceResponse/cubit/category-view_model.dart';
 import 'package:newsapp/CategorySourceResponse/cubit/statae.dart';
 import 'package:newsapp/Theme/my_them.dart';
 import 'package:newsapp/model/CategoryModel.dart';
+import 'package:newsapp/repository/Sources/datasource/source_repository_impl.dart';
 
 class Category extends StatefulWidget {
   CategoryModel categoryModel;
@@ -14,7 +15,7 @@ class Category extends StatefulWidget {
   @override
   State<Category> createState() => _CategoryState();
 }
-CategoryViewModel viewModel = CategoryViewModel();
+CategoryViewModel viewModel = CategoryViewModel(injectSourceRepositoryContract());
 
 class _CategoryState extends State<Category> {
   @override
