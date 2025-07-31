@@ -30,7 +30,7 @@ class MyTheme {
 ),
 
  appBarTheme: AppBarTheme(
-
+toolbarHeight:100,
     elevation: 0,
      shape: RoundedRectangleBorder(
        borderRadius: BorderRadius.only(
