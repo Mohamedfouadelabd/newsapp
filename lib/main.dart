@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/Home/home_screen.dart';
+import 'package:newsapp/NewsFullDetils/news_full_detils.dart';
 import 'package:newsapp/Theme/my_them.dart';
 import 'package:newsapp/provider/app_config_provider.dart';
 import 'package:newsapp/settings/settings-tap.dart';
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     var provider = Provider.of<AppConfigProvider>(context);
     return MaterialApp(
+     debugShowCheckedModeBanner: false,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
 
@@ -24,6 +26,7 @@ class MyApp extends StatelessWidget {
       routes: {
         HomeScreen.routeName: (context) => HomeScreen(),
         SettingsTap.routeName: (context) => SettingsTap(),
+        NewsFullDetils.routeName: (context) => NewsFullDetils(),
       },
       theme: MyTheme.lightMode,
       locale: Locale(provider.appLanguage),

@@ -26,8 +26,9 @@ var categoryList=CategoryModel.getCategory(context);
           child: GridView.builder(
             itemCount: categoryList.length,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,crossAxisSpacing: 5,
-
+                crossAxisCount: 2,crossAxisSpacing: 10,
+mainAxisSpacing: 10,
+              mainAxisExtent: MediaQuery.of(context).size.height*0.3
 
             ),
             itemBuilder: (context, index) {

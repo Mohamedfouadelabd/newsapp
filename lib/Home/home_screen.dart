@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/Category/category_Detils.dart';
+
 import 'package:newsapp/Home/category_fragment.dart';
+import 'package:newsapp/Search/news_search.dart';
 import 'package:newsapp/Theme/my_them.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:newsapp/model/CategoryModel.dart';
 
 
-import '../Category/category.dart';
+import '../CategorySourceResponse/category.dart';
 import 'drawer_Item.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -35,6 +36,12 @@ class _HomeScreenState extends State<HomeScreen> {
         Scaffold(
           appBar: AppBar(
             title: Text(AppLocalizations.of(context)!.appTitle),
+         actions: [IconButton(onPressed: (){
+           showSearch(context: context, delegate: NewsSearch());
+
+         }, icon:Icon(Icons.search,
+         size: 40,
+         ))],
           ),
           drawer: DraweItem(),
           body: selectedCategory == null

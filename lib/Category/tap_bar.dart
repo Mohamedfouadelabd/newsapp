@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/Category/category_Detils.dart';
+
 import 'package:newsapp/Category/tap_Item.dart';
 
+import '../Category Detils/category_detils.dart';
 import '../model/SourceResponse.dart';
 
 class TapBar extends StatefulWidget {

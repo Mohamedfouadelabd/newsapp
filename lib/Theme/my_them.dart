@@ -15,9 +15,22 @@ class MyTheme {
   static Color gray = Color(0xff79828B);
 
   static ThemeData lightMode = ThemeData(
+    brightness: Brightness.light,
     scaffoldBackgroundColor: Colors.transparent,
- appBarTheme: AppBarTheme(
 
+
+
+    inputDecorationTheme: InputDecorationTheme(
+
+  hintStyle: TextStyle(color:MyTheme.white),
+
+  activeIndicatorBorder:  BorderSide.none,
+  focusedBorder: OutlineInputBorder(borderSide: BorderSide.none),
+    enabledBorder: OutlineInputBorder(borderSide: BorderSide.none),
+),
+
+ appBarTheme: AppBarTheme(
+toolbarHeight:100,
     elevation: 0,
      shape: RoundedRectangleBorder(
        borderRadius: BorderRadius.only(
