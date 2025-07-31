@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:newsapp/Searche_Detils/search_tap.dart';
 
-import '../Api/api_manger.dart';
-import '../Category/category_detils_item.dart';
+
 import '../Theme/my_them.dart';
-import '../model/NewsSoureResponse.dart';
+
 
 class NewsSearch extends SearchDelegate{
   @override
@@ -57,42 +57,8 @@ return [IconButton(onPressed: (){
             fit: BoxFit.fill,
           ),
         ),
-        FutureBuilder<NewsSourceResponse?>(
-          future: ApiManger.searchNews(query),
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return Center(
-                child: CircularProgressIndicator(color: MyTheme.primary),
-              );
-            } else if (snapshot.hasError) {
-              return Column(
-                children: [
-                  Text('Something went wrong'),
-                  ElevatedButton(
-                    onPressed: () {
-                      // Retry
-                    },
-                    child: Text('Try Again'),
-                  )
-                ],
-              );
-            }
 
-            if (snapshot.data?.status != 'ok') {
-              return Text(snapshot.data?.message ?? "Unknown error");
-            }
-
-            var newsList = snapshot.data?.articles ?? [];
-
-            return ListView.builder(
-              itemCount: newsList.length,
-              itemBuilder: (context, index) {
-                return CategoryDetilsItem(news: newsList[index]);
-              },
-            );
-          },
-        ),
-
+SearchTap(query: query),
 
 
       ],
