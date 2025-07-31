@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/Category/category_Detils.dart';
+
 import 'package:newsapp/Home/category_fragment.dart';
 import 'package:newsapp/Search/news_search.dart';
 import 'package:newsapp/Theme/my_them.dart';
@@ -7,7 +7,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:newsapp/model/CategoryModel.dart';
 
 
-import '../Category/category.dart';
+import '../CategorySourceResponse/category.dart';
 import 'drawer_Item.dart';
 
 class HomeScreen extends StatefulWidget {

@@ -1,0 +1,20 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:newsapp/Api/api_manger.dart';
+import 'package:newsapp/Category%20Detils/cubit/ststes.dart';
+
+class CategoryDetilsViewModel extends Cubit<SourceState> {
+  CategoryDetilsViewModel() : super(SourceLoadingState());
+  void getNews(String id) async {
+    try {
+      emit(SourceLoadingState());
+      var response = await ApiManger.getNewsResponse(id);
+      if (response.status == 'error') {
+        emit(SourceErrorState(errorMassage: response.message));
+      } else {
+        emit(SourceSuccesState(newsList: response.articles));
+      }
+    } catch (e) {
+    emit(SourceErrorState(errorMassage: 'error'));
+    }
+  }
+}
